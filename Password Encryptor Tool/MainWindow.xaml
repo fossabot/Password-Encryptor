@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Password_Encryptor_Tool"
         mc:Ignorable="d"
-        Title="密码生成器 by Kucashu 20181212" Height="251" Width="374" ResizeMode="NoResize">
+        Title="密码生成器" Height="251" Width="374" ResizeMode="NoResize">
 
     <Grid Margin="0,0,2,-1">
         <Grid.ColumnDefinitions>
@@ -32,7 +32,7 @@
         <Button x:Name="encrypt" Content="生成" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="20,150,0,0" Height="40" Click="Encrypt_Click" IsDefault="True"/>
         <Button x:Name="Exit" Content="退出" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="17,150,0,0" Height="40" RenderTransformOrigin="0.253,-1.842" Click="Exit_Click" Grid.Column="1"/>
         <Button Style="{StaticResource CleanButton}" Content="Powered By Kucashu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="20,195,0,0" BorderThickness="0" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Palace Script MT" Focusable="False" ScrollViewer.VerticalScrollBarVisibility="Disabled" Click="Button_Click"/>
-        <Button Style="{StaticResource CleanButton}" Content="Build 20181213" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="87,195,0,0" BorderThickness="0" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Palace Script MT" Focusable="False" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="1"/>
+        <Button Style="{StaticResource CleanButton}" Content="v0.0.2-alpha" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,195,21,0" BorderThickness="0" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Palace Script MT" Focusable="False" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="1"/>
 
     </Grid>
 
