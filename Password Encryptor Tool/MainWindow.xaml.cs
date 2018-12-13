@@ -105,6 +105,7 @@ namespace Password_Encryptor_Tool
         private void CodeON_Checked(object sender, RoutedEventArgs e)
         {
             codeBox.IsEnabled = true;
+            // diffCode.IsEnabled = true;
         }
 
 
@@ -171,27 +172,31 @@ namespace Password_Encryptor_Tool
                 encrypool[13] = SHA512Encrypt(encrypool[2] + encrypool[3] + encrypool[2]);
                 encrypool[14] = MD5_32BEncrypt(encrypool[10]) + MD5_32LEncrypt(encrypool[11]) + MD5_32BEncrypt(encrypool[12]) + MD5_32LEncrypt(encrypool[13]);
                 char[] encryChar = encrypool[14].ToCharArray();
-
-                int modSum_1 =  (int)encryChar[0] % 7;
-                int modSum_2 =  (int)encryChar[1] % 15;
-                int modSum_3 =  (int)encryChar[2] % 15;
-                int modChar_1 = (int)encryChar[0] % 9;
-                int modChar_2 = (int)encryChar[1] % 6;
-                int modChar_3 = (int)encryChar[2] % 5 ;
-                char[] charpool_1 = { '!', '@', '#', '$', '%', '^', '&', '*', '(',')' }; // 10位
-                char[] charpool_2 = { '-', '=', '+', '{', '}', '[', ']' }; //7位
-                char[] charpool_3 = { ':', ';', '/', '?', '<', '>' }; //6位
-                
                 char[] passChar = new char[20];
                 for (int loop = 1; loop <= 128; loop += 8)
                 {
                     passChar[flag] = encryChar[loop-1];
                     flag++;
                 }
-                passChar[modSum_1] = charpool_1[modChar_1];
-                passChar[modSum_2] = charpool_2[modChar_2];
-                passChar[modSum_3] = charpool_3[modChar_3];
-                for (int loop = 1; loop <= 16; loop += 1)
+
+                if (diffCode.IsChecked == true)
+                {
+                    int modSum_1 = (int)encryChar[0] % 7;
+                    int modSum_2 = (int)encryChar[1] % 15;
+                    int modSum_3 = (int)encryChar[2] % 15;
+                    int modChar_1 = (int)encryChar[0] % 9;
+                    int modChar_2 = (int)encryChar[1] % 6;
+                    int modChar_3 = (int)encryChar[2] % 5;
+                    char[] charpool_1 = { '!', '@', '#', '$', '%', '^', '&', '*', '(', ')' }; // 10位
+                    char[] charpool_2 = { '-', '=', '+', '{', '}', '[', ']' }; //7位
+                    char[] charpool_3 = { ':', ';', '/', '?', '<', '>' }; //6位
+                    passChar[modSum_1] = charpool_1[modChar_1];
+                    passChar[modSum_2] = charpool_2[modChar_2];
+                    passChar[modSum_3] = charpool_3[modChar_3];
+
+                }
+
+                    for (int loop = 1; loop <= 16; loop += 1)
                 {
                     finalPass += passChar[loop];
                 }
@@ -202,5 +207,15 @@ namespace Password_Encryptor_Tool
             }
         }
 
+        private void DiffCode_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            About about = new About();
+            about.Show();
+        }
     }
 }

@@ -8,11 +8,11 @@ using System.Windows;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("Password Encryptor Tool")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("一个密码生成工具")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Kucashu")]
 [assembly: AssemblyProduct("Password Encryptor Tool")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCopyright("Copyright ©  2018 Kucashu")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

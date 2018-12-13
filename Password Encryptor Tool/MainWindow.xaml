@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Password_Encryptor_Tool"
         mc:Ignorable="d"
-        Title="密码生成器 by Kucashu 20181212" Height="237" Width="374" ResizeMode="NoResize">
+        Title="密码生成器 by Kucashu 20181212" Height="251" Width="374" ResizeMode="NoResize">
+
     <Grid Margin="0,0,2,-1">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -24,12 +25,16 @@
             <Grid HorizontalAlignment="Left" Height="125" Margin="0,-5,-2,-7" VerticalAlignment="Top" Width="151">
                 <TextBox x:Name="codeBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Margin="10,81,0,0" RenderTransformOrigin="0.55,0" VerticalContentAlignment="Center"/>
                 <TextBlock TextWrapping="Wrap" Margin="10,59,81,51" Text="自定义密码"/>
-                <TextBlock TextWrapping="Wrap" Text="自定义密码选项" Margin="10,10,38,100"/>
-                <CheckBox x:Name="CodeON" Content="启用自定义密码" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" IsChecked="True" Checked="CodeON_Checked"/>
+                <CheckBox x:Name="CodeON" Content="启用自定义密码" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" IsChecked="True" Checked="CodeON_Checked"/>
+                <CheckBox x:Name="diffCode" Content="启用高复杂度*" HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top" Checked="DiffCode_Checked" AutomationProperties.Name="diffCode"/>
             </Grid>
         </GroupBox>
-        <Button x:Name="encrypt" Content="生成" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="20,150,0,0" Height="40" Click="Encrypt_Click"/>
-        <Button x:Name="Exit" Content="退出" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Grid.Column="1" Margin="18,150,0,0" Height="40" RenderTransformOrigin="0.253,-1.842" Click="Exit_Click"/>
+        <Button x:Name="encrypt" Content="生成" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="20,150,0,0" Height="40" Click="Encrypt_Click" IsDefault="True"/>
+        <Button x:Name="Exit" Content="退出" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="17,150,0,0" Height="40" RenderTransformOrigin="0.253,-1.842" Click="Exit_Click" Grid.Column="1"/>
+        <Button Style="{StaticResource CleanButton}" Content="Powered By Kucashu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="20,195,0,0" BorderThickness="0" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Palace Script MT" Focusable="False" ScrollViewer.VerticalScrollBarVisibility="Disabled" Click="Button_Click"/>
+        <Button Style="{StaticResource CleanButton}" Content="Build 20181213" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="87,195,0,0" BorderThickness="0" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Palace Script MT" Focusable="False" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="1"/>
 
     </Grid>
+
+
 </Window>
