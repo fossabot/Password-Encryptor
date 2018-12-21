@@ -1,4 +1,6 @@
 ## Password Encryptor
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FKucashu%2FPassword-Encryptor.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FKucashu%2FPassword-Encryptor?ref=badge_shield)
+
 
 ### 起源
 
@@ -44,3 +46,6 @@ GitHub：<https://github.com/Kucashu/Password-Encryptor>
 博客：Kucashu.com  
 QQ交流群：277211897  
 我的QQ：203377325
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FKucashu%2FPassword-Encryptor.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FKucashu%2FPassword-Encryptor?ref=badge_large)
